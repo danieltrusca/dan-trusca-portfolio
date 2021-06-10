@@ -1,7 +1,9 @@
 const router=require("express").Router();
 
-router.get("/", (req, res)=>{
-    res.send("Here is users routes");
-})
+const {update, remove, getUser}=require("../controllers/user");
+
+router.get("/:id", getUser);
+router.put("/:id", update);
+router.delete("/:id", remove);
 
 module.exports = router;
