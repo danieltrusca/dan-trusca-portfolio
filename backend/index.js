@@ -11,7 +11,7 @@ const morgan = require("morgan");
 // routes
 const userRoute=require("./routes/users");
 const authRoute=require("./routes/auth");
-
+const postsRoute=require("./routes/posts");
 
 
 dotenv.config();
@@ -41,7 +41,7 @@ app.use(cors());
 // routes middleware
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
-
+app.use("/api/posts", postsRoute);
 
 app.listen(8800, ()=>{
     console.log("Backend server is running");
