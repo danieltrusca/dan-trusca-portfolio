@@ -1,0 +1,12 @@
+.feed{
+    flex: 5.5; 
+}
+
+.feed::-webkit-scrollbar {
+    display: none;
+  }
+
+.feedWrapper{
+    padding: 20px;
+}
+

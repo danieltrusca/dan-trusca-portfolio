@@ -7,7 +7,7 @@ import Testimonials from "../components/testimonials/Testimonials"
 import Contact from "../components/contact/Contact";
 import Menu from "../components/menu/Menu";
 
-import "../App.scss";
+import "./Home.scss";
 
 const Home = () => {
     const [menuOpen,setMenuOpen] = useState(false)

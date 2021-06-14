@@ -7,6 +7,7 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    
   }
   
   .topbarLeft {
@@ -54,6 +55,7 @@
     align-items: center;
     justify-content: space-around;
     color: white;
+    
   }
   
   .topbarLink {
@@ -64,6 +66,7 @@
   
   .topbarIcons {
     display: flex;
+    overflow-x: unset;
   }
   
   .topbarIconItem {
@@ -71,6 +74,7 @@
     overflow: visible; 
     cursor: pointer;
     position: relative;
+    
   }
   
   .topbarIconBadge {
