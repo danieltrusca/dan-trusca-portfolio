@@ -39,9 +39,15 @@ exports.remove= async (req, res)=>{
 }
 
 exports.getUser=async (req, res)=>{
+    const userId = req.query.userId;
+    const username = req.query.username;
     try{
-        const user=await User.findOne({_id: req.params.id}).select("-password");
+        const user=userId
+                  ? await User.findOne({_id: userId}).select("-password")
+                  : await User.findOne({ username: username }).select("-password");
         return res.status(200).json({user});
+        // const { password, updatedAt, ...other } = user._doc;
+        // res.status(200).json(other);
     } catch(err){
         return res.status(500).json({err});
     }

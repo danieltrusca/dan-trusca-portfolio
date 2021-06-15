@@ -49,6 +49,11 @@ export const Users = [
       profilePicture: "assets/person/10.jpeg",
       username: "Safak Kocaoglu",
     },
+    {
+      id:"60c86f6617f0cf08a4866d57",
+      profilePicture: "assets/person/10.jpeg",
+      username: "Safak Kocaoglu",
+    },
   ];
   
   export const Posts = [

@@ -12,7 +12,7 @@ const AppFacebook = () => {
         <>
             <Switch>
                 <Route path="/facebook" exact component={Home} />
-                <Route path="/facebook/profile" exact component={Profile} />
+                <Route path="/facebook/profile/:username"  component={Profile} />
                 <Route path="/facebook/login" exact component={Login} />
                 <Route path="/facebook/register" exact component={Register} />
             </Switch>

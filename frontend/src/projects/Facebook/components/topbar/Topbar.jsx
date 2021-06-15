@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import "./Topbar.css";
 import {Search, Person, Chat, Notifications} from "@material-ui/icons";
 
@@ -6,7 +7,11 @@ const Topbar = () => {
     return (
         <div className="topbarContainer">
         <div className="topbarLeft">
-          <span className="logo">Social App</span>
+          <Link to="/facebook" style={{textDecoration: "none"}}>
+              <span  className="logo">
+                Social App
+              </span>
+            </Link>
         </div>
         <div className="topbarCenter">
           <div className="searchbar">
@@ -36,7 +41,10 @@ const Topbar = () => {
               <span className="topbarIconBadge">1</span>
             </div>
           </div>
-          <img src="/assets/person/1.jpeg" alt="" className="topbarImg"/>
+          <Link to="/facebook/profile/dana">
+              <img src="/assets/person/1.jpeg" alt="" className="topbarImg"/>
+          </Link>
+          
         </div>
       </div>
     )

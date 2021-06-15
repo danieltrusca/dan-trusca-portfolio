@@ -107,7 +107,7 @@ exports.findUserPosts=async (req, res)=>{
     try{
         const user=await User.findOne({username: req.params.username});
         const userPosts=await Post.find({userId: user._id});
-        res.status(200).json({userPosts});
+        res.status(200).json(userPosts);
     } catch(err){
         res.status(500).json({error: err});
     }
