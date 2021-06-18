@@ -10,7 +10,8 @@ import Rightbar from "../../components/rightbar/Rightbar";
 import "./profile.css";
 
 const Profile = () => {
-    // const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    // console.log(PF+"person/noCover.png");
     const [user, setUser] = useState({});
     const username = useParams().username;
 
@@ -34,13 +35,13 @@ const Profile = () => {
                             <img
                                 className="profileCoverImg"
                                 // src="/assets/post/3.jpeg"
-                                src={user.coverPicture ? user.coverPicture : "/assets/person/noCover.png"}
+                                src={user.coverPicture ? PF+user.coverPicture : PF+"person/noCover.png"}
                                 alt="my profile"
                             />
                             <img
                                 className="profileUserImg"
                                 // src="/assets/person/7.jpeg"
-                                src={user.profilePicture ? user.profilePicture : "/assets/person/noAvatar.png"}
+                                src={user.profilePicture ? PF+user.profilePicture : PF+"person/noAvatar.png"}
                                 alt="user profile"
                             />
                         </div>
@@ -50,7 +51,7 @@ const Profile = () => {
                         </div>
                     </div>
                     <div className="profileRightBottom">
-                        <Feed username="jenny" />
+                        <Feed username={username} />
                         <Rightbar user={user} />
                     </div>
                 </div> 

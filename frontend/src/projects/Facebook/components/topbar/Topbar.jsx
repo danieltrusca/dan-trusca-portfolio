@@ -1,9 +1,13 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import { useSelector } from 'react-redux';
 import "./Topbar.css";
 import {Search, Person, Chat, Notifications} from "@material-ui/icons";
 
 const Topbar = () => {
+  const PF=process.env.REACT_APP_PUBLIC_FOLDER;
+  const userSignin = useSelector((state) => state.authFacebook);
+  const { userInfo } = userSignin;
     return (
         <div className="topbarContainer">
         <div className="topbarLeft">
@@ -41,8 +45,14 @@ const Topbar = () => {
               <span className="topbarIconBadge">1</span>
             </div>
           </div>
-          <Link to="/facebook/profile/dana">
-              <img src="/assets/person/1.jpeg" alt="" className="topbarImg"/>
+          <Link to={`/facebook/profile/${userInfo.username}`}>
+              <img 
+                src={
+                  userInfo.profilePicture
+                    ? PF + userInfo.profilePicture
+                    : PF + "person/noAvatar.png"
+                }
+              alt="" className="topbarImg"/>
           </Link>
           
         </div>

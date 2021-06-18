@@ -82,3 +82,13 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+.loginRegisterLink{
+    text-align: center;
+    color: #1775ee;
+    text-decoration: none;
+}
+
+.danger_error{
+  color: red;
+}
